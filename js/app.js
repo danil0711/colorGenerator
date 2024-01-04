@@ -1,6 +1,5 @@
 const cols = document.querySelectorAll('.col')
 // setting colors
-setRandomColors()
 
 // space is triggering function setRandomColors()
 document.addEventListener('keydown', event => {
