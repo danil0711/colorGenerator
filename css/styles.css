@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.col{ 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.col h2{
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    transition: background 0.15s;
+}
+
+.col h2:hover{
+    background: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.footer:hover{
+    cursor: pointer;
+}
+
+.col button {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #d7d6d6;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.1s;
+}
+
+.col button:hover {
+    background: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+}
+
+.footer{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 650px) {
+    body {
+        height: auto;
+        display: block;
+    }
+
+    .col {
+        display: block;
+        width: 100%;
+        height: 200px;
+        flex-wrap: wrap;
+        box-sizing: content-box; /* Меняем box-sizing на content-box для .col */
+        padding: 10px; /* Добавляем внутренний отступ для стилизации */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col > * {
+        width: 100%;
+        box-sizing: border-box; /* Меняем box-sizing на border-box для дочерних элементов .col */
+        margin-bottom: 10px; /* Добавляем немного вертикального отступа между элементами */
+    }
+    .header{
+        position: relative;
+    }
+    .header p{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .col:last-child{
+        padding-bottom: 0px;
+    }
+
+}
